@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" type="text/css" href="app.css"></link>
+</head>
+<body>
+    <!-- Main App container -->
+    <div id="app">
+        <!-- Header -->
+        <header>
+            <h1>My Blog</h1>
+        </header>
+        <!-- Content -->
+        <section>
+            <div class="error"></div>
+        </section>
+        <section>
+            <aside>
+                <button class="create-new">Create New</button>
+            </aside>
+            <main id="content-container"></main>
+        </section>
+        <!-- Footer -->
+        <footer></footer>
+        <!-- Template for each Blog tile-->
+        <template id="blog-tile">
+            <article class="tile">
+                <div class="blog-header">
+                    <h2 class="title">{{title}}</h2>
+                    <div class="timestamp">{{timestamp}}</div>
+                </div>
+                <p class="content">{{content}}</p>
+                <div class="blog-item-actions">
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </div>
+            </article>
+        </template>
+
+        <!-- Modal content -->
+        <div id="new-post-modal" class="modal">
+            <form class="modal-content">
+                <h3 class="title">New Post</h3>
+                <div>
+                    <label>Title</label>
+                    <input name="title" type="text" />
+                </div>
+                
+                <div>
+                    <label>Text</label>
+                    <textarea name="text"></textarea>
+                </div>
+                <button type="submit">Save</submit>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/EventEmitter/5.2.8/EventEmitter.min.js"></script>
+    <script src="networkCall.js"></script>
+    <script src="util.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

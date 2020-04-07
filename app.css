@@ -1,0 +1,45 @@
+@import "./modal.css";
+@import "./error.css";
+
+header {
+  text-align: center;
+}
+
+section {
+  display: flex;
+}
+
+aside {
+  width: 30%;
+  background-color: #f8f8f8;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+main {
+  width: 70%;
+  margin: 20px;
+}
+.tile {
+  background-color: #f8f8f8;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.blog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog-item-actions {
+  text-align: right;
+}
+
+button {
+  width: 10rem;
+  height: 2rem;
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
