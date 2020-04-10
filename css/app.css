@@ -20,6 +20,13 @@ main {
   width: 70%;
   margin: 20px;
 }
+li{
+  list-style: none;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
 .tile {
   background-color: #f8f8f8;
   margin-bottom: 50px;
