@@ -4,6 +4,7 @@ class Controller{
         this.view = view;
 
         view.bindDeleteBlog(this.deleteBlog.bind(this));
+        view.bindAddBlog(this.createBlog);
     }
 
     init(){
@@ -17,6 +18,10 @@ class Controller{
         this.store.delete(id).then(() => {
             this.view.deleteBlog(id);
         })
+    }
+
+    createBlog(){
+        this.view.createBlog();
     }
 
 }

@@ -2,6 +2,7 @@ class View{
     constructor(template){
         this.template = template;
         this.$blogList = document.querySelector('.blogs-list');
+        this.$createBlog = document.querySelector('.create-new');
     }
 
     showBlogs(items){
@@ -20,8 +21,8 @@ class View{
 		});
     }
 
-    deleteBlog(id){
-        this.$blogList.querySelector(`[data-id="${id}"]`).remove();
+    bindAddBlog(handler){
+        $on(this.$createBlog, 'click', target);
     }
 
 }
