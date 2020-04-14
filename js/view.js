@@ -22,7 +22,12 @@ class View{
     }
 
     bindAddBlog(handler){
-        $on(this.$createBlog, 'click', target);
+        // $on(this.$createBlog, 'click', target);
+    }
+
+    deleteBlog(id){
+        console.log(id);
+        this.$blogList.querySelector(`[data-id="${id}"]`).remove();
     }
 
 }
